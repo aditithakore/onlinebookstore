@@ -21,6 +21,36 @@ public class Books {
 	private Authors author;
 
 	private String isbn;
+	
+	private boolean isTrending = false;
+	
+	private boolean onHero = false;
+	
+	private boolean isDealOfTheDay = false;
+
+	public boolean getIsTrending() {
+		return isTrending;
+	}
+
+	public void setTrending(boolean isTrending) {
+		this.isTrending = isTrending;
+	}
+
+	public boolean getOnHero() {
+		return onHero;
+	}
+
+	public void setOnHero(boolean onHero) {
+		this.onHero = onHero;
+	}
+
+	public boolean getDealOfTheDay() {
+		return isDealOfTheDay;
+	}
+
+	public void setDealOfTheDay(boolean isDealOfTheDay) {
+		this.isDealOfTheDay = isDealOfTheDay;
+	}
 
 	@ManyToOne
 	private Publishers publisher;
