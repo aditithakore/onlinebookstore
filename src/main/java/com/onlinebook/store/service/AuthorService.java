@@ -21,4 +21,7 @@ public class AuthorService {
     public Optional<Authors> getAuthors(Long id) {
     	return authorRepository.findById(id);
     }
+    public List<Authors> getAuthorsByName(String name) {
+    	return authorRepository.findByName(name);
+    }
 }

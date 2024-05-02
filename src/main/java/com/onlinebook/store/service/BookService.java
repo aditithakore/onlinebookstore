@@ -33,4 +33,7 @@ public class BookService {
 	public Optional<Books> getBookDetails(Long id) {
 		return bookRepository.findById(id);
 	}
+	public List<Books> getByName(String title){
+		return bookRepository.findByTitle(title);
+	}
 }

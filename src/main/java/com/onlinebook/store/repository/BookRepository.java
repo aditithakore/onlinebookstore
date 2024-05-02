@@ -15,4 +15,5 @@ public interface BookRepository extends JpaRepository<Books, Long> {
 	List<Books> findByIsTrending(boolean trending);
 	List<Books> findByOnHero(boolean onHero);
 	List<Books> findByIsDealOfTheDay(boolean dealOfTheDay);
+	List<Books> findByTitle(String title);
 }

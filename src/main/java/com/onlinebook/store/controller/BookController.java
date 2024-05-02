@@ -8,6 +8,9 @@ import com.onlinebook.store.service.BookService;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/books")
@@ -44,6 +47,11 @@ public class BookController {
     public Optional<Books> getBookDetails(@RequestParam Long id) {
         return bookService.getBookDetails(id);
     }
+    @GetMapping("/search")
+    public List<Books> getByTitle(@RequestParam String by){
+    	return bookService.getByName(by);
+    }	
+    
     // Add other REST endpoints as needed
 
 }
